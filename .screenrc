@@ -1,0 +1,23 @@
+defshell -bash
+startup_message off
+altscreen on
+
+# Allow bold colors - necessary for some reason
+attrcolor b ".I"
+
+# Erase background with current bg color
+defbce on
+
+# Enable 256 color term
+term screen-256color
+
+truecolor on
+
+# Cache 30000 lines for scroll back
+defscrollback 30000
+
+termcapinfo xterm* ti@:te@
+
+hardstatus alwayslastline
+# Very nice tabbed colored hardstatus line
+hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG}'
